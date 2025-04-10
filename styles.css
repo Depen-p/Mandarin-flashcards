@@ -1,120 +1,61 @@
-/* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-    flex-wrap: wrap;
 }
 
-/* Container Styles */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 .container {
     text-align: center;
-    flex: 1;
-    padding: 20px;
-    max-width: 100%;
-}
-
-/* Heading Styles */
-h1 {
-    color: #333;
-}
-
-/* Word Display */
-#word {
-    font-size: 2em;
-    color: #007bff;
-    margin: 20px 0;
-}
-
-/* Textarea Styles */
-textarea {
-    padding: 10px;
-    font-size: 1em;
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Saved Files Section */
-.saved-files {
-    width: 250px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-left: 20px;
-    position: relative;
-    top: 50px;
-    flex: 0 0 300px;
-}
-
-/* Templates Section */
-.templates {
-    width: 250px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-right: 20px;
-    position: relative;
-    top: 50px;
-    flex: 0 0 300px;
-}
-
-/* Template Button */
-.templates button {
-    display: block;
-    margin: 10px 0;
     width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.saved-files, .templates {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 900px) {
-    .container {
-        width: 100%;
+@media screen and (max-width: 700px) {
+    .bottom-sections {
+        flex-direction: column;
+        align-items: center;
     }
 
     .saved-files, .templates {
-        width: 100%;
-        margin: 10px 0;
+        width: 90%;
     }
 }
 
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    #word {
-        font-size: 1.5em;
-    }
-
-    textarea {
-        width: 100%;
-    }
-
-    .saved-files, .templates {
-        width: 100%;
-    }
+#word {
+    font-size: 3em; /* Make it big */
+    margin: 40px 0;
+    font-weight: bold;
+    text-align: center;
 }

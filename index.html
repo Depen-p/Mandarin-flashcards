@@ -7,45 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Random Word Generator</h1>
-
-        <!-- Input area for pasting words -->
-        <textarea id="wordInput" rows="10" cols="30" placeholder="Paste words here, separated by a new line..."></textarea><br>
-
-        <!-- Save word list button -->
-        <button onclick="saveWordList()">Save Word List</button>
-
-        <!-- Generate word button -->
-        <p id="word">Press the button to generate a random word.</p>
-        <button onclick="generateRandomWord()">Generate Word</button>
-    </div>
-
-    <!-- Saved Files Section (Left Side) -->
-    <div class="saved-files">
-        <h2>Saved Word Lists</h2>
-
-        <div id="savedFilesList">
-            <!-- List of saved files will appear here -->
+    <div class="main-wrapper">
+        <div class="container">
+            <h1>Random Word Generator</h1>
+            <textarea id="wordInput" rows="10" cols="30" placeholder="Paste words here, separated by a new line..."></textarea><br>
+            <button onclick="saveWordList()">Save Word List</button>
+            <p id="word">Press the button to generate a random word.</p>
+            <button onclick="generateRandomWord()">Generate Word</button>
         </div>
 
-        <!-- Clear all saved word lists button -->
-        <button onclick="clearAllSavedFiles()">Clear All Saved Files</button>
-    </div>
+        <!-- Group the bottom sections -->
+        <div class="bottom-sections">
+            <div class="saved-files">
+                <h2>Saved Word Lists</h2>
+                <div id="savedFilesList"></div>
+                <button onclick="clearAllSavedFiles()">Clear All Saved Files</button>
+            </div>
 
-    <!-- Templates Section (Right Side) -->
-    <div class="templates">
-        <h2>Word List Templates</h2>
-        <button onclick="loadTemplate('hsk1m')">HSK 1 Mandarin</button>
-        <button onclick="loadTemplate('hsk1p')">HSK 1 Pinyiin</button>
-        <button onclick="loadTemplate('hsk2m')">HSK 2 Mandarin</button>
-        <button onclick="loadTemplate('hsk2p')">HSK 2 Pinyin</button>
-        <button onclick="loadTemplate('hsk3m')">HSK 3 Mandarin</button>
-        <button onclick="loadTemplate('hsk3p')">HSK 3 Pinyin</button>
-        <button onclick="loadTemplate('hsk4m')">HSK 4 Mandarin</button>
-        <button onclick="loadTemplate('hsk4p')">HSK 4 Pinyin</button>
+            <div class="templates">
+                <h2>Word List Templates</h2>
+                <button onclick="loadTemplate('hsk1m')">HSK 1 Mandarin</button>
+                <button onclick="loadTemplate('hsk1p')">HSK 1 Pinyiin</button>
+                <button onclick="loadTemplate('hsk2m')">HSK 2 Mandarin</button>
+                <button onclick="loadTemplate('hsk2p')">HSK 2 Pinyin</button>
+                <button onclick="loadTemplate('hsk3m')">HSK 3 Mandarin</button>
+                <button onclick="loadTemplate('hsk3p')">HSK 3 Pinyin</button>
+                <button onclick="loadTemplate('hsk4m')">HSK 4 Mandarin</button>
+                <button onclick="loadTemplate('hsk4p')">HSK 4 Pinyin</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
